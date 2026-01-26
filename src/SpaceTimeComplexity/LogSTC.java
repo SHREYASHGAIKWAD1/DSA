@@ -4,12 +4,16 @@ public class LogSTC {
     public static void main(String[] args) {
         int[] arr = new int[]{2,5,10,20,40,60,70};
 
-//        for (int i = 0; i < arr.length; i++){
-//            if(arr[i] == 40) {
-//                System.out.println("Found the value 40 at index " + i);     //Inefficient solution in terms of Time C.
-//            }
-//        }
+        var startTime = System.nanoTime();
+        for (int i = 0; i < arr.length; i++){
+            if(arr[i] == 40) {
+                System.out.println("Found the value 40 at index " + i);     //Inefficient solution in terms of Time C.
+            }
+        }
+        var endTime = System.nanoTime();
+        System.out.println("Linear S. took Time taken in nanoseconds: " + (endTime - startTime));
 
+        startTime = System.nanoTime();
         int start = 0;
         int end = arr.length - 1;
 
@@ -24,5 +28,7 @@ public class LogSTC {
                 end = mid - 1;
             }
         }
+        endTime = System.nanoTime();
+        System.out.println("Binary search took : " +  (endTime - startTime));
     }
 }
