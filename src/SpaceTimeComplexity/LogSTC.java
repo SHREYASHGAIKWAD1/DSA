@@ -11,7 +11,7 @@ public class LogSTC {
             }
         }
         var endTime = System.nanoTime();
-        System.out.println("Linear S. took Time taken in nanoseconds: " + (endTime - startTime));
+        System.out.println("Linear S. took - Time taken in nanoseconds: " + (endTime - startTime));
 
         startTime = System.nanoTime();
         int start = 0;
@@ -29,6 +29,6 @@ public class LogSTC {
             }
         }
         endTime = System.nanoTime();
-        System.out.println("Binary search took : " +  (endTime - startTime));
+        System.out.println("Binary search took - Time taken in nanoseconds: " +  (endTime - startTime));
     }
 }
