@@ -12,5 +12,6 @@ public class ConstantSTC { //O(1)
 
         //O(1) + O(1) = O(2) == 0(1) // Constant Time Complexity.
         //O(4bytes) == O(1) //Constant Space Complexity.
+
     }
 }

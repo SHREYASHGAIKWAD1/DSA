@@ -30,5 +30,6 @@ public class LogSTC {
         }
         endTime = System.nanoTime();
         System.out.println("Binary search took - Time taken in nanoseconds: " +  (endTime - startTime));
+
     }
 }
