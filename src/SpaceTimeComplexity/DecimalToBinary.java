@@ -11,7 +11,7 @@ public class DecimalToBinary {
         this.num = num;
     }
 
-    public static List<Integer> decimalToBinary(int num){
+    public List<Integer> decimalToBinary(int num){
         ArrayList<Integer> arr = new ArrayList<>();
         while (num!=0) {
             if(num%2==0){
@@ -26,7 +26,7 @@ public class DecimalToBinary {
     }
 
     public static void main(String[] args) {
-        DecimalToBinary dto = new DecimalToBinary(3);
-        System.out.println(decimalToBinary(30));
+        DecimalToBinary dto = new DecimalToBinary(20);
+        System.out.println(dto.decimalToBinary(dto.num));
     }
 }
