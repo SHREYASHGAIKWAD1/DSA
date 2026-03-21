@@ -4,6 +4,19 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+
+// Binary Timeline Method to convert from decimal to binary number
+
+    // 2^6 | 2^5 | 2^4 | 2^3 | 2^2 | 2^1 | 2^0
+    // 64  | 32  | 16  |  8  |  4  |  2  |  1
+    //  0     0     0     1     1     1     1
+
+    // for example the number is 15
+    //Therefore, in binary system 15 will 1111
+
+
+
+
 public class DecimalToBinary {
 
     private final int num;
