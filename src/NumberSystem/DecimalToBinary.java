@@ -12,26 +12,26 @@ public class DecimalToBinary {
         this.num = num;
     }
 
-    public String decimalToBinary(int num){
-//        ArrayList<Integer> arr = new ArrayList<>();
-//        while (num!=0) {
-//            if(num%2==0){
-//                arr.addLast(0);
-//                num = num/2;
-//            } else {
-//                arr.addLast(1);
-//                num = num/2;
-//            }
-//        }
-//        return arr.reversed();
-
-        String result = "";
-        while(num > 0){
-            int rem = num % 2;
-            num = num / 2;
-            result = rem + result;
+    public List<Integer> decimalToBinary(int num){
+        ArrayList<Integer> arr = new ArrayList<>();
+        while (num != 0) {
+            if (num % 2 == 0) {
+                arr.addLast(0);
+                num = num / 2;
+            } else {
+                arr.addLast(1);
+                num = num / 2;
+            }
         }
-        return result;
+        return arr.reversed();
+
+//        String result = "";
+//        while(num > 0){
+//            int rem = num % 2;
+//            num = num / 2;
+//            result = rem + result;
+//        }
+//        return result;
     }
 
     public static void main(String[] args) {
