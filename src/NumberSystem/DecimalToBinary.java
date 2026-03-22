@@ -15,8 +15,6 @@ import java.util.Scanner;
     //Therefore, in binary system 15 will 1111
 
 
-
-
 public class DecimalToBinary {
 
     private final int num;
