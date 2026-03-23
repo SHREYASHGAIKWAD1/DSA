@@ -11,5 +11,6 @@ public class Main {
         System.out.println("~a:   " + (~a));
         System.out.println("~b:   " + (~b));
         System.out.println("~c:   " + (~c));
+        System.out.println("a ^ b: " + (a ^ b));
     }
 }
