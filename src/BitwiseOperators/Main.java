@@ -12,5 +12,10 @@ public class Main {
         System.out.println("~b:   " + (~b));
         System.out.println("~c:   " + (~c));
         System.out.println("a ^ b: " + (a ^ b));
+
+        System.out.println(10 << 1);
+        System.out.println(10 >> 1);
+        System.out.println(10 >> 10);
+        System.out.println(10 << 2);
     }
 }
