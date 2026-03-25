@@ -14,6 +14,20 @@ import java.util.Scanner;
     // for example the number is 15
     //Therefore, in binary system 15 will 1111
 
+class Converter {
+
+    public StringBuilder toBinary(int decimal) {
+        StringBuilder sb = new StringBuilder();
+
+        while(decimal > 0) {
+            int lastBit = decimal&1;
+            sb.insert(0, lastBit);
+            decimal >>= 1;
+        }
+        return sb;
+    }
+}
+
 
 public class DecimalToBinary {
 
@@ -46,14 +60,20 @@ public class DecimalToBinary {
     }
 
     public static void main(String[] args) {
+//
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.print("Enter a Decimal number: ");
+//        int number = scanner.nextInt();
+//        var startTime = System.nanoTime();
+//        DecimalToBinary dto = new DecimalToBinary(number);
+//        System.out.println(dto.decimalToBinary(dto.num));
+//        var endTime = System.nanoTime();
+//        System.out.println("Time taken to covert the number to binary system in nanoseconds: " + (endTime - startTime));
 
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter a Decimal number: ");
-        int number = scanner.nextInt();
-        var startTime = System.nanoTime();
-        DecimalToBinary dto = new DecimalToBinary(number);
-        System.out.println(dto.decimalToBinary(dto.num));
-        var endTime = System.nanoTime();
-        System.out.println("Time taken to covert the number to binary system in nanoseconds: " + (endTime - startTime));
+        var startTime1 = System.nanoTime();
+        Converter c = new Converter();
+        System.out.println(c.toBinary(10));
+        var endTime1 = System.nanoTime();
+        System.out.println("Time taken to covert the number to binary system in nanoseconds: " + (endTime1 - startTime1));
     }
 }
