@@ -16,6 +16,20 @@ import java.util.Scanner;
 
 class Converter {
 
+    public int toDecimal(int binary) {
+        int result = 0;
+        int index = 0;
+        while (binary != 0) {
+            int lastDigit = binary % 10;
+            if(lastDigit == 1){
+                result = result + (int)Math.pow(2, index);
+            }
+            index++;
+            binary /= 10;
+        }
+        return result;
+    }
+
     public StringBuilder toBinary(int decimal) {
         StringBuilder sb = new StringBuilder();
 
@@ -72,8 +86,10 @@ public class DecimalToBinary {
 
         var startTime1 = System.nanoTime();
         Converter c = new Converter();
-        System.out.println(c.toBinary(10));
+        System.out.println(c.toBinary(35));
         var endTime1 = System.nanoTime();
         System.out.println("Time taken to covert the number to binary system in nanoseconds: " + (endTime1 - startTime1));
+
+        System.out.println(c.toDecimal(100011));
     }
 }
