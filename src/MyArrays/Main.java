@@ -14,7 +14,16 @@ public class Main {
         arr[3] = 4;
         arr[4] = 5;
 
-        System.out.println(arr[1]);
-        System.out.println(arr);
+        //System.out.println(arr[1]);
+        //System.out.println(arr);
+        MyArray arr1 = new MyArray(5);
+
+        arr1.insert(1);
+        arr1.insert(2);
+        arr1.insert(3);
+        arr1.insert(4);
+        arr1.insert(5);
+
+        System.out.println(arr1);
     }
 }
