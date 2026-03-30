@@ -16,10 +16,12 @@ public class MyArray {
     }
 
     public String toString() {
-        String str = "";
-        for (int nums:this.items) {
-            str = str + nums + ", ";
+       StringBuilder str = new StringBuilder();
+        str.append("[");
+        for (int nums: this.items) {
+            str.append(nums).append(", ");
         }
-        return str;
+        str.append("\b").append("\b").append("]");
+        return str.toString();
     }
 }
