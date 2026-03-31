@@ -15,6 +15,16 @@ public class MyArray {
         this.currentIndex++;
     }
 
+    //Linear search
+    public int indexOf(int value) {
+        for(int i = 0; i <this.items.length; i++) {
+            if(this.items[i] == value) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
     public String toString() {
        StringBuilder str = new StringBuilder();
         str.append("[");
