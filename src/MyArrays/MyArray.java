@@ -17,7 +17,7 @@ public class MyArray {
 
     //Linear search
     public int indexOf(int value) {
-        for(int i = 0; i <this.items.length; i++) {
+        for(int i = 0; i <this.currentIndex; i++) {
             if(this.items[i] == value) {
                 return i;
             }

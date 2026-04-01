@@ -16,7 +16,7 @@ public class Main {
 
         //System.out.println(arr[1]);
         //System.out.println(arr);
-        MyArray arr1 = new MyArray(5);
+        MyArray arr1 = new MyArray(15);
 
         arr1.insert(1);
         arr1.insert(2);
@@ -25,5 +25,6 @@ public class Main {
         arr1.insert(5);
 
         System.out.println(arr1);
+        System.out.println(arr1.indexOf(20));
     }
 }
