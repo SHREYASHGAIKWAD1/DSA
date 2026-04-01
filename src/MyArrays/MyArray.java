@@ -25,6 +25,15 @@ public class MyArray {
         return -1;
     }
 
+    public void removeAt(int index) {
+
+        for(int i = index; i <= this.currentIndex - 2; i++) {
+            this.items[i] = this.items[i + 1];
+        }
+        this.currentIndex--;
+        this.items[this.currentIndex] = 0;
+    }
+
     public String toString() {
        StringBuilder str = new StringBuilder();
         str.append("[");
