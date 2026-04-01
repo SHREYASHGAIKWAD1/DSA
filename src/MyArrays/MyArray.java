@@ -27,6 +27,8 @@ public class MyArray {
 
     public void removeAt(int index) {
 
+        if(index >=  this.currentIndex) throw new IllegalArgumentException();
+
         for(int i = index; i <= this.currentIndex - 2; i++) {
             this.items[i] = this.items[i + 1];
         }
@@ -34,11 +36,22 @@ public class MyArray {
         this.items[this.currentIndex] = 0;
     }
 
+    public int max() {
+        int result = 0;
+
+        for(int i=0; i<this.currentIndex; i++) {
+            if(this.items[i] > result) {
+                result = this.items[i];
+            }
+        }
+        return result;
+    }
+
     public String toString() {
        StringBuilder str = new StringBuilder();
         str.append("[");
-        for (int nums: this.items) {
-            str.append(nums).append(", ");
+        for (int i = 0; i < this.currentIndex; i++) {
+            str.append(items[i]).append(", ");
         }
         str.append("\b").append("\b").append("]");
         return str.toString();
