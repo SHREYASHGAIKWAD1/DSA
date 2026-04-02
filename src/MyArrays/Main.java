@@ -1,6 +1,7 @@
 package MyArrays;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Main {
 
@@ -24,11 +25,15 @@ public class Main {
         arr1.insert(4);
         arr1.insert(5);
         arr1.insert(60);
+        arr1.insert(-3);
 
         arr1.removeAt(2);
         //arr1.insert(6);
         System.out.println(arr1);
         //System.out.println(arr1.indexOf(20));
         System.out.println(arr1.max());
+        System.out.println(arr1.min());
+        arr1.reverse();
+        System.out.println(arr1);
     }
 }

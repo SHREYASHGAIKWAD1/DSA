@@ -37,6 +37,8 @@ public class MyArray {
     }
 
     public int max() {
+
+        if(this.items.length == 0) throw new RuntimeException("Array is Empty!");
         int result = 0;
 
         for(int i=0; i<this.currentIndex; i++) {
@@ -45,6 +47,30 @@ public class MyArray {
             }
         }
         return result;
+    }
+
+    public int min() {
+        int result = Integer.MAX_VALUE;
+
+        for(int i=0; i<this.currentIndex; i++) {
+            if(this.items[i] < result) {
+                result = this.items[i];
+            }
+        }
+        return result;
+    }
+
+    public void reverse() {
+        int i = 0;
+        int j = this.currentIndex - 1;
+
+        while(i < j) {
+            int temp = this.items[i];
+            this.items[i] = this.items[j];
+            this.items[j] = temp;
+            i++;
+            j--;
+        }
     }
 
     public String toString() {
