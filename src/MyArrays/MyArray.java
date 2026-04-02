@@ -11,6 +11,13 @@ public class MyArray {
     }
 
     public void insert(int value) {
+        if(currentIndex == items.length){
+            int[] temp = new int[items.length * 2];
+            for(int i = 0; i < currentIndex; i++) {
+                temp[i] = items[i];
+            }
+            items = temp;
+        }
         this.items[this.currentIndex] = value;
         this.currentIndex++;
     }
