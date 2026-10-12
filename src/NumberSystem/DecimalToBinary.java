@@ -86,10 +86,10 @@ public class DecimalToBinary {
 
         var startTime1 = System.nanoTime();
         Converter c = new Converter();
-        System.out.println(c.toBinary(35));
+        System.out.println(c.toBinary(20));
         var endTime1 = System.nanoTime();
         System.out.println("Time taken to covert the number to binary system in nanoseconds: " + (endTime1 - startTime1));
 
-        System.out.println(c.toDecimal(100011));
+        System.out.println(c.toDecimal(10100));
     }
 }
